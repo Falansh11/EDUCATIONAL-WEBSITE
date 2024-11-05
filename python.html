@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Courses</title>
+    <style>
+        .required::after{
+            content: "* (required)";
+            color: red;
+        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; }
+        h1, h2 { color: #333; }
+        .course-list { display: flex; flex-direction: column; gap: 20px; }
+        .course { border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+        .price { color: green; font-weight: bold; }
+        .form-container { margin-top: 30px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; }
+        input[type="text"], input[type="email"], select { width: 100%; padding: 8px; margin-top: 5px; }
+        input[type="submit"] { background-color: #28a745; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px; }
+        input[type="submit"]:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Python Courses</h1>
+    
+    <!-- Course List -->
+    <div class="course-list">
+        <div class="course">
+            <h2>Python for Beginners</h2>
+            <p>Learn the basics of Python programming, including syntax, variables, and data types.</p>
+            <p class="price">Price: ₹499</p>
+        </div>
+        
+        <div class="course">
+            <h2>Intermediate Python</h2>
+            <p>Take your Python skills to the next level with more complex concepts and applications.</p>
+            <p class="price">Price: ₹999</p>
+        </div>
+        
+        <div class="course">
+            <h2>Advanced Python</h2>
+            <p>Master advanced topics like decorators, generators, and object-oriented programming.</p>
+            <p class="price">Price: ₹1499</p>
+        </div>
+    </div>
+    
+    <!-- Registration Form -->
+    <div class="form-container">
+        <h2>Register for a Course</h2>
+        <form action="submit_registration.php" method="post">
+            <div class="form-group">
+                <label class="required" placeholder="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="required" placeholder="email@gmail.com">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="beginners">Python for Beginners - ₹499</option>
+                    <option value="intermediate">Intermediate Python - ₹999</option>
+                    <option value="advanced">Advanced Python - ₹1499</option>
+                </select>
+            </div>
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

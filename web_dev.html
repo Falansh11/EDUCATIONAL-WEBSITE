@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course</title>
+    <style>
+        .required::after{
+            content: "* (required)";
+            color: red;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        .course-info {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .price {
+            font-size: 24px;
+            color: #007bff;
+            margin: 10px 0;
+        }
+        form {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Web Development Course</h1>
+    </header>
+
+    <div class="container">
+        <div class="course-info">
+            <h2>About the Course</h2>
+            <p>Learn the fundamentals of web development with HTML, CSS, and JavaScript. This course is designed to give you hands-on experience in building modern, responsive websites.</p>
+            <p class="price">Course Price: ₹5000</p>
+        </div>
+
+        <form action="/submit_registration" method="POST">
+            <h2>Registration Form</h2>
+            <label class="required">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label class="required">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label class="required">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+            <label class="required">Type 'YES' to register:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <a style="height: 15px; width:80px;background-color: rgb(130, 183, 206);color:white" href="logged.html">Submit </a>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Web Development Academy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
